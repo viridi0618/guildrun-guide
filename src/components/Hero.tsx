@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import { homeImage } from "@/data/images";
 
 export default function Hero() {
   return (
@@ -18,6 +20,7 @@ export default function Hero() {
           <div className="status-row"><span className="status-dot review" /><div><strong>Review</strong><small>Substantive, sourced, noindex</small></div></div>
           <div className="status-row"><span className="status-dot draft" /><div><strong>Draft</strong><small>Not routed or publicly linked</small></div></div>
         </div>
+        <figure className="hero-visual"><Image src={homeImage.src} alt={homeImage.alt} width={homeImage.width} height={homeImage.height} sizes="(max-width: 1212px) calc(100vw - 2rem), 1180px" priority style={{ objectPosition: homeImage.objectPosition }} /><figcaption>{homeImage.credit}</figcaption></figure>
       </div>
     </section>
   );

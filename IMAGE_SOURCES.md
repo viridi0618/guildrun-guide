@@ -1,9 +1,17 @@
 # Image sources
 
-No third-party or game imagery is used in the initial public UI. The visual system uses original CSS gradients, grid texture, typography, and geometric shapes.
+Guildrun game imagery is locally hosted from official Leyline / Guildrun releases. The site does not claim ownership of these materials.
 
-| File | Source | Authorization / basis | Captured | Used on |
-| --- | --- | --- | --- | --- |
-| `public/og.png` | Original AI-generated editorial social card | Created for this repository with the built-in image generation tool; contains no game screenshots or third-party marks | 2026-07-22 | Social link previews |
-
-The page UI itself uses an original CSS-only visual system.
+| Local file | Official source page | Original asset URL | Publisher | Retrieved | Route | Processing |
+| --- | --- | --- | --- | --- | --- | --- |
+| `public/images/guildrun/home-hero.webp` | [Guildrun official website](https://www.playguildrun.com/) | [Official backdrop](https://static.wixstatic.com/media/029bb4_623a4e7f616d450d9b70f587ceb94214~mv2.png/v1/fill/w_980%2Ch_437%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/guildrunbackdrop.png) | Leyline / Guildrun | 2026-07-22 | `/` | WebP compression; no crop |
+| `public/images/guildrun/beginner-guide.webp` | [Guildrun official website](https://www.playguildrun.com/) | [Official trial screenshot](https://static.wixstatic.com/media/029bb4_de9c33dba6034927939f5854939a8576~mv2.png) | Leyline / Guildrun | 2026-07-22 | `/beginner-guide` | Resized to 1920×1080 and WebP compressed; no crop |
+| `public/images/guildrun/reserve-heroes.webp` | [Guildrun official website](https://www.playguildrun.com/) | [Official hero group](https://static.wixstatic.com/media/029bb4_d75cd7b0c3ad4fb29913acc6a81c91e7~mv2.png/v1/fill/w_980%2Ch_971%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/SomeHeroes.png) | Leyline / Guildrun | 2026-07-22 | `/reserve-heroes` | WebP compression; transparency retained; no crop |
+| `public/images/guildrun/shop-guide.webp` | [Guildrun official website](https://www.playguildrun.com/) | [Official shop screenshot](https://static.wixstatic.com/media/029bb4_e6ab1fb0011a4fdeaeb85eafac180040~mv2.png) | Leyline / Guildrun | 2026-07-22 | `/shop-guide` | Resized to 1920×1080 and WebP compressed; no crop |
+| `public/images/guildrun/release-date.webp` | [Guildrun on Steam](https://store.steampowered.com/app/3669200/Guildrun/) | [Official Steam header](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3669200/ba1be5e06b4213bdc210aafb0fa151acf9947d34/header_2x.jpg) | Leyline / Guildrun | 2026-07-22 | `/release-date` | WebP compression; no crop |
+| `public/images/guildrun/difficulty-endless.webp` | [Guildrun official website](https://www.playguildrun.com/) | [Official dragon battle screenshot](https://static.wixstatic.com/media/029bb4_9c373838e14c42158ac9a4cf43e7430b~mv2.png/v1/fill/w_1450%2Ch_816%2Cq_90%2Cenc_avif%2Cquality_auto/029bb4_9c373838e14c42158ac9a4cf43e7430b~mv2.png) | Leyline / Guildrun | 2026-07-22 | `/difficulty-endless` | WebP compression; no crop |
+| `public/images/guildrun/rush-mechanic.webp` | [Guildrun official website](https://www.playguildrun.com/) | [Official battle screenshot](https://static.wixstatic.com/media/029bb4_ea881d87ce744cc8a3161ecb48a85e29~mv2.png) | Leyline / Guildrun | 2026-07-22 | `/rush-mechanic` | Resized to 1920×1080 and WebP compressed; no crop |
+| `public/images/guildrun/beginner-mistakes.webp` | [Guildrun official website](https://www.playguildrun.com/) | [Official hero upgrade screenshot](https://static.wixstatic.com/media/029bb4_378f169b7e3a4f1abc2d843d993a9be9~mv2.png) | Leyline / Guildrun | 2026-07-22 | `/beginner-mistakes` | Resized to 1920×1080 and WebP compressed; no crop |
+| `public/images/guildrun/builds.webp` | [Guildrun official website](https://www.playguildrun.com/) | [Official hero-area backdrop](https://static.wixstatic.com/media/029bb4_8b7ae2afd2304cd0b55923db5fae2ffa~mv2.png/v1/fill/w_980%2Ch_477%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/heroesbackdrop.png) | Leyline / Guildrun | 2026-07-22 | `/builds` | WebP compression; transparency retained; no crop |
+| `public/images/guildrun/tier-list.webp` | [Guildrun on Steam](https://store.steampowered.com/app/3669200/Guildrun/) | [Official launch trailer still](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/257359590/9faa7bf1a8e968c24669c679c37e173999baa970/movie_full.jpg) | Leyline / Guildrun | 2026-07-22 | `/tier-list` | WebP compression; no crop |
+| `public/og.png` | Repository artwork | Original editorial social card generated for this repository | Site project | 2026-07-22 | Social link previews | No change |
