@@ -1,11 +1,6 @@
 export type ContentStatus = "draft" | "review" | "ready";
-export type SourceLevel =
-  | "official"
-  | "developer-statement"
-  | "game-store"
-  | "community-reference"
-  | "community-discussion"
-  | "editorial";
+export type EvidenceType = "confirmed-fact" | "community-report" | "editorial-recommendation" | "uncertainty";
+export type SourceLevel = "official" | "developer-statement" | "game-store" | "community-reference" | "community-discussion" | "editorial";
 
 export interface Source {
   id: string;
@@ -17,6 +12,22 @@ export interface Source {
   capturedAt: string;
   usedFor: string[];
 }
+export interface EvidenceBlock {
+  heading: string;
+  body: string;
+  evidenceType: EvidenceType;
+  sourceRefs: string[];
+}
+
+export interface GuideSection {
+  name: string;
+  blocks: EvidenceBlock[];
+}
+
+export interface QuickFact {
+  fact: string;
+  detail: string;
+}
 
 export interface GuideRecord {
   slug: string;
@@ -27,9 +38,11 @@ export interface GuideRecord {
   indexable: boolean;
   lastReviewed: string;
   versionContext: string;
+  directAnswer: string;
   sourceRefs: string[];
   uncertainties: string[];
-  sections: string[];
+  sections: GuideSection[];
+  quickFacts: QuickFact[];
   relatedGuides: string[];
   blocker?: string;
 }
