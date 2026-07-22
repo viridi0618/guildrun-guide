@@ -1,0 +1,2 @@
+import type { Source } from "@/lib/types";
+export default function SourceList({ sources }: { sources: Source[] }) { return <section className="article-section"><h2>Sources</h2><ol className="source-list">{sources.map((source) => <li id={`source-${source.id.toLowerCase()}`} key={source.id}><strong>{source.id}</strong> — <a href={source.url} rel="noreferrer">{source.title}</a><span>{source.publisherOrAuthor} · {source.level} · captured {source.capturedAt}</span></li>)}</ol></section>; }
