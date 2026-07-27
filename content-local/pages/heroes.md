@@ -1,55 +1,32 @@
-# /heroes — Guildrun Heroes Guide: Roles, Classes & Team Choices
+# /heroes — Guildrun Heroes Guide: Roles & Team Choices
 
 slug: heroes
 title: Guildrun Heroes Guide — Roles, Classes & Team Choices
 h1: Guildrun Heroes Guide
-description: Learn how to choose Guildrun heroes, balance frontline and damage roles, use specializations, and adapt your team for Rush, Stall, Reserve, and Endless runs.
+description: Learn how to choose Guildrun heroes, balance team roles, use specializations, and build your party around the game's adaptation-focused design.
 recommendedStatus: ready
 recommendedIndexable: true
 lastReviewed: 2026-07-27
-versionContext: Steam demo (released 2026-07-16); hero count and class data from official Steam store page and developer FAQ
+versionContext: Steam demo (released 2026-07-16); data from official Steam store page and developer FAQ
 
 ## directAnswer
 
-Guildrun's demo features 25 heroes across 7 classes — Warrior, Vanguard, Tank, Duelist, Assassin, Mage, and Mystic — each with 3 specialization paths for up to 75 total specialization options. Choosing the right heroes is not about finding a single "best" character. It is about understanding what each class does, diagnosing what your team is missing, and picking heroes that fit your strategic direction (Rush or Stall) while keeping your party balanced. This guide explains how hero classes work, how to read your team's weaknesses, and how to adapt your hero choices as your run evolves — with no fake tier list and no invented stats.
+Guildrun's demo features 25 heroes with multiple specialization paths, according to the Steam store page (L001) and developer FAQ (L002). Choosing the right heroes is not about finding a single "best" character — it is about diagnosing what your team is missing and picking heroes that fit your strategic direction while keeping your party balanced. The developer-designed principle is adaptation: success depends on how you build your team and respond to the challenges each run presents. This guide explains how to think about hero roles, team balance, and selection strategy — with no fake tier list and no invented stats.
 
 ## sections
 
 ### How Guildrun Heroes Work
 
-heading: Heroes, Classes, and Specializations
+heading: Heroes and Specializations
 body: |
-  Each hero in Guildrun belongs to one of 7 classes. Classes determine a hero's keyword affiliations (Rush or Stall), their general role expectations, and the kinds of items and relics that tend to benefit them.
+  The Steam store page advertises "25 heroes across 75 spec paths" (L001), and the developer FAQ mentions "25 heroes, 180 specializations, 300+ relics and 100+ items" (L002). These two numbers may represent different ways of counting — 75 specialization paths (3 per hero × 25 heroes) versus a larger total of specialization options across the full game. Until the developer clarifies, both numbers should be understood as representing the breadth of the specialization system, not as contradictory data.
 
-  The 7 classes, as listed on the official Steam store page:
-  - **Warrior** — Rush keyword. Melee damage dealers.
-  - **Vanguard** — Rush keyword. Frontline initiators.
-  - **Tank** — Stall keyword. Damage absorbers.
-  - **Duelist** — Both Rush and Stall keywords (unique among classes). Flexible fighters.
-  - **Assassin** — Rush keyword. High-burst single-target killers.
-  - **Mage** — Stall keyword. Ability-focused magic damage.
-  - **Mystic** — Stall keyword. Support, control, and utility casters.
+  What is confirmed:
+  - 25 heroes are available in the demo
+  - Each hero has specialization options that change how they develop
+  - The game is designed for adaptation — "every run lets you evolve your heroes through upgrades, paths, items, and relics, creating new strategies every time" (L002)
 
-  Each hero also has 3 specialization paths, giving you up to 75 total specialization options across all heroes. Specializations can significantly change how a hero plays — a Duelist might lean harder into Rush with one path or become more of a sustained fighter with another.
-
-  The Steam store page advertises "25 heroes across 75 spec paths" and the developer FAQ confirms "25 heroes, 180 specializations, 300+ relics and 100+ items in the demo alone."
-
-evidenceType: confirmed-fact
-sourceRefs: [L001, L002]
-
-### Starting Class vs Final Role
-
-heading: A Hero's Starting Class Is Not Their Final Role
-body: |
-  In Guildrun, a hero's class is a starting point, not a permanent label. Several systems can change what a hero actually does for your team:
-
-  **Items can shift a hero's job.** A Mage with Attack Speed and Crit items starts behaving more like a physical damage dealer. A Tank with Mana Regen and ability-enhancing relics becomes a caster-tank hybrid. The game encourages adaptation based on what the shop offers.
-
-  **Specializations can change a hero's role.** Since each hero has 3 paths, you can often steer them toward damage, utility, or survivability depending on what your team needs. A Mystic with a damage-focused specialization can become your primary magic carry.
-
-  **Relics add new abilities.** Some relics trigger effects based on conditions (when an ally dies, when a hero casts an ability, when an enemy reaches low HP). These can override a hero's intended play pattern — a Tank with a damage-trigger relic might contribute significant kill pressure.
-
-  The developer-designed principle is adaptation: the Steam store page emphasizes that success depends on "how you build your team and adapt to the challenges you face" and that every run offers "new strategies every time."
+  Specific class names, keyword affiliations, and detailed hero mechanics have not been published in official developer documentation. The Steam store page describes the game as an autobattler roguelike where hero choices interact with items, relics, and the current run's random options.
 
 evidenceType: confirmed-fact
 sourceRefs: [L001, L002]
@@ -58,148 +35,115 @@ sourceRefs: [L001, L002]
 
 heading: Diagnose Your Team Before Picking
 body: |
-  Before picking your next hero, ask these questions:
+  Before picking your next hero, evaluate what your team currently needs. This is an editorial framework — a method for self-assessment, not a description of confirmed game mechanics:
 
-  1. **Is my frontline dying too fast?** You need more Defense, HP, or a second frontline hero. Tanks and Vanguards fill this role. If fights are ending before your frontline falls, you might not need another tank.
-  2. **Are enemies not dying fast enough?** You need more damage — Warriors, Assassins, Duelists, or Mages depending on what damage type your current team lacks. If you have three physical damage dealers and enemies have high Defense, a Mage with Magic damage can bypass that.
-  3. **Are fights going past the Rush window with nothing happening?** Your team lacks sustained damage or scaling. Stall classes (Tank, Mage, Mystic) or a Duelist on a Stall path can give you long-fight power.
-  4. **Are your backline damage dealers getting killed?** Your frontline positioning or tank count is insufficient. Consider adding a second Tank or a Vanguard with crowd-control abilities.
-  5. **Are you winning fights but barely?** Your team is adequate but not efficient. A flex pick — a Duelist who can fill either role — gives you options for the next shops.
+  1. **Is your team taking too much damage?** Consider heroes that can absorb enemy attacks.
+  2. **Are enemies not dying fast enough?** Consider heroes focused on dealing damage.
+  3. **Are fights dragging on without progress?** Consider heroes with sustained or scaling damage potential.
+  4. **Are your key heroes getting eliminated early?** Consider adding more protection or a second durable hero.
+  5. **Are you winning but barely?** Consider a flexible hero that can fill multiple roles.
 
-  This diagnostic approach is more important than following any "best team composition" list, because your available heroes, items, and relics change every run.
+  The developer FAQ emphasizes adaptation based on the specific options each run presents (L002). This diagnostic approach is a way to practice that adaptation mindset.
 
 evidenceType: editorial-recommendation
 sourceRefs: [L001, L002]
 
-### Frontline, Damage, Control, Sustain, and Utility
+### Team Balance Principles
 
-heading: The Five Team Functions
+heading: Covering Essential Functions
 body: |
-  Every Guildrun team should cover these five functions. A single hero can fulfill more than one, especially after items and relics are applied:
+  Most successful roguelike autobattler teams cover several core functions. A single hero can fulfill more than one, especially after items and specializations are applied:
 
-  | Function | What it does | Classes that provide it |
-  |----------|-------------|------------------------|
-  | Frontline | Absorbs enemy attacks, protects backline | Tank, Vanguard, some Duelists |
-  | Damage | Kills enemies before they kill you | Warrior, Assassin, Mage, Duelist |
-  | Control | Slows or disables enemies | Mystic, some Mages |
-  | Sustain | Heals, shields, or regenerates allies | Mystic, some Tanks |
-  | Utility | Buffs allies, debuffs enemies, generates resources | Mystic, some Mages, some Duelists |
+  | Function | What it does | Why it matters |
+  |----------|-------------|----------------|
+  | Frontline | Absorbs enemy attacks | Prevents backline deaths |
+  | Damage | Eliminates enemies | Wins fights |
+  | Support | Heals, shields, buffs, or debuffs | Extends team survival |
+  | Flexibility | Adapts to changing conditions | Handles unexpected challenges |
 
-  A typical balanced team has: 1-2 frontline, 1-2 damage dealers, and 1 flex (control, sustain, or utility). You can run 3 damage dealers if your frontline hero is exceptionally durable and well-itemized, but you risk collapse if that one hero dies.
-
-  The Rush/Stall keyword system means your team should generally lean one direction: either most heroes have Rush (fight fast) or most have Stall (fight long). A team with two Rush heroes and one Stall hero will have the Stall hero doing nothing useful during the Rush window.
+  The specific distribution depends on the heroes, items, and relics available in your current run. The developer FAQ states: "Success depends on how you build your team and adapt to the challenges you face" (L002). There is no fixed formula that works every run.
 
 evidenceType: editorial-recommendation
 sourceRefs: [L002]
 
-### Choosing Heroes for Rush
+### Choosing Heroes for Different Approaches
 
-heading: Building a Rush Team
+heading: Building Around Your Strategic Direction
 body: |
-  Rush teams aim to end fights within the Rush window (the first N seconds of combat). Your hero picks should maximize burst damage and early pressure:
+  Your hero choices should align with your overall approach. While specific keywords and mechanics are not confirmed in official documentation, the following framework helps organize your thinking:
 
-  **Preferred classes:** Warrior, Vanguard, Assassin, Duelist (all have Rush keyword).
-  **What to look for:** Heroes with Rush abilities that amplify Attack Speed, Crit, or direct damage. High base Attack Speed heroes generate mana faster, letting them cast abilities sooner.
-  **Frontline:** Usually 1 Vanguard or Duelist — you want fast engagement, not slow tanking. Your frontline's job is to make contact and start dealing damage, not to absorb indefinitely.
-  **Backline:** Warriors and Assassins with Crit-scaling or burst abilities. Stack items that increase Attack, Crit, and Attack Speed.
-  **Avoid:** Heroes whose core abilities only activate during Stall. A Mystic on a Rush team contributes almost nothing until the fight has already passed the Rush window.
+  **If you want to win fights quickly (aggressive approach):**
+  - Prioritize heroes that deal high damage early
+  - Stack items that amplify damage output
+  - Relics that reward fast clears are likely to benefit this approach
 
-  Rush teams are strongest in early and mid-game, on lower difficulties, and when farming Shards quickly. They fall off in Endless where enemy HP outscales burst damage.
+  **If you want to survive longer fights (defensive approach):**
+  - Prioritize heroes that can endure damage and provide sustain
+  - Stack items that improve durability and recovery
+  - Relics that scale over time are likely to benefit this approach
+
+  **If you want a balanced approach:**
+  - One durable hero to absorb damage
+  - One damage dealer to eliminate enemies
+  - One flex hero to fill gaps based on what the shop offers
+
+  These are editorial decision-making frameworks. The game's design encourages you to "evolve your heroes through upgrades, paths, items, and relics, creating new strategies every time" (L002).
 
 evidenceType: editorial-recommendation
 sourceRefs: [L001, L002]
 
-### Choosing Heroes for Longer Fights and Endless
+### When to Invest in an Existing Hero
 
-heading: Building for Stall, Endless, and Long Fights
+heading: Strengthening Your Core vs Adding New Heroes
 body: |
-  When fights last beyond the Rush window, Stall keywords activate and sustained damage becomes critical. Your hero picks should prioritize survival and scaling:
+  A recurring decision in Guildrun is whether to improve a hero you already have or acquire a new one:
 
-  **Preferred classes:** Tank, Mystic, Mage, Duelist (all have Stall keyword).
-  **What to look for:** Heroes with DoT abilities (Poison, Burn), heal/shield skills, or scaling passives. Defense-scaling becomes more important the longer a fight lasts.
-  **Frontline:** 1-2 Tanks with high base HP and Defense. They must survive until Stall effects activate and beyond. The Storm (anti-stall clock starting at ~50s) means you still need to win, not just survive.
-  **Damage:** Mages with scaling abilities or DoT effects. Mystics with damage-dealing specializations can serve as secondary damage while providing utility.
-  **Sustain:** At least one hero (usually Mystic or Tank with self-heal) that can keep the team alive through extended fights.
+  **Prioritize improving an existing hero when:**
+  - That hero is your primary damage dealer or tank — concentrated power is often more effective than spread-out power
+  - You already have items well-suited to that hero — improving the hero multiplies the value of those items
+  - Your team has no obvious gaps in function
 
-  According to the Steam store page, the game features "8 difficulty picks" and "Endless mode to chase the top of the global leaderboards." Higher difficulties and Endless favor Stall-style teams because enemies have too much HP for Rush burst to kill within the window.
+  **Prioritize adding a new hero when:**
+  - Your team has an unfilled role (no frontline, no damage, no support)
+  - You have items that benefit a hero type you do not currently have
+  - Your current team composition is vulnerable to specific threats and a new hero type would provide coverage
+
+  The right choice depends on your current run state. The developer-designed principle is adaptation (L002) — evaluate each decision based on what your run specifically needs.
 
 evidenceType: editorial-recommendation
 sourceRefs: [L001, L002]
 
-### When to Rank Up an Existing Hero
-
-heading: Ranking Up vs Buying a New Hero
-body: |
-  Ranking up an existing hero (buying a duplicate from the shop) provides:
-  - +25% HP
-  - +25 Attack
-  - +20 Attack Speed (per community reference data)
-
-  At higher difficulties where item slots are gated by hero rank (Index 4 / S difficulty and above), ranking up becomes essential rather than optional.
-
-  **Prioritize ranking up when:**
-  - Your main carry has enough items but low survivability — the HP boost from ranking often prevents one-shots.
-  - You have a clear carry hero identified and want to concentrate power.
-  - Item slots are rank-gated and you need more slots.
-
-  **Prioritize buying a new hero when:**
-  - Your team has an unfilled function (no frontline, no damage, no sustain).
-  - You have items that benefit a specific class sitting unused in your inventory.
-  - Your reserve bench is empty — reserve heroes with Backup abilities can contribute even while benched.
-
-  There is no universal rule for "always rank" or "always buy." The decision depends on your current team state and what the shop offers.
-
-evidenceType: editorial-recommendation
-sourceRefs: [L001]
-
-### How Specializations Can Change a Hero's Job
+### How Specializations Change Your Options
 
 heading: Reading Specialization Paths
 body: |
-  With 3 specialization paths per hero, you have significant control over how each hero develops during a run. Key principles:
+  With multiple specialization options per hero, you can steer each hero's development during a run. Key principles:
 
-  **Check specialization options before committing items.** If your Warrior has a path that rewards Attack Speed stacking and another that rewards ability casting, your item choices should align with which path you plan to take.
+  **Check specialization options before committing items.** A hero's specialization path determines what kinds of items and relics benefit them most. Aligning items with the chosen path is more effective than picking items first and hoping the path matches.
 
-  **Specializations can add keywords.** Some specializations may grant additional effects (scaling, AoE, conditional triggers) that change what the hero needs from items and relics.
+  **Specializations can change a hero's role.** A hero you drafted for damage may have a specialization path that makes them better at support or durability. Read the options before assuming a hero's role is fixed.
 
-  **Synergy with relics matters more than raw stats.** A specialization that triggers "on kill" pairs well with relics that also trigger on kill. A specialization that scales with Defense pairs well with Defense-stacking items.
+  **Synergy with relics.** Some specializations create effects that pair well with specific relic types. A specialization that triggers on certain conditions works better when your relics also respond to those conditions.
 
-  **Don't over-commit before seeing your options.** In the early game, hold flexible items rather than committing to a specific specialization path before you know what relics and later shops will offer.
+  **Stay flexible early.** In the early part of a run, hold flexible items rather than committing to a specific path before you know what relics and later options will offer.
 
-  The developer FAQ emphasizes that "each run lets you evolve your heroes through upgrades, paths, items, and relics, creating new strategies every time."
+  The developer FAQ emphasizes that "each run lets you evolve your heroes through upgrades, paths, items, and relics" (L002).
 
 evidenceType: editorial-recommendation
 sourceRefs: [L002]
 
-### How Reserve Heroes Affect Team Decisions
-
-heading: Reserve Heroes Are Not Benchwarmers
-body: |
-  Heroes with the **Backup** keyword provide their effects even while in reserve (on the bench). This changes hero-picking decisions:
-
-  **Buy Backup heroes even if you don't need them active.** A Backup hero provides value without consuming a frontline or backline slot.
-
-  **Backup heroes can serve as emergency replacements.** If your active hero dies, a reserve hero with Backup can step in and already provide some value.
-
-  **Don't fill your bench with non-Backup heroes.** Three reserve slots filled with heroes that do nothing from the bench are wasted gold that could have been spent on items or ranks.
-
-  The 25-hero roster means you will encounter heroes with different keyword combinations. A hero with Rush on the active board and Backup in reserve can fit multiple strategies.
-
-evidenceType: editorial-recommendation
-sourceRefs: [L001, L002]
-
 ### Beginner Hero-Picking Checklist
 
-heading: A Simple Checklist for New Players
+heading: A Simple New-Player Checklist
 body: |
-  For your first 5-10 runs, follow this checklist rather than trying to optimize:
+  For your first few runs, follow this checklist:
 
-  1. **Start with 1 frontline (Tank or Vanguard) + 1 damage dealer (Warrior or Assassin).** This covers the two essential functions.
-  2. **Your third hero should fill the gap.** If fights feel slow, add damage. If your frontline dies, add a second tank. If neither is a problem, add a Mystic for sustain/utility.
-  3. **Pick heroes that share a keyword direction.** Three Rush heroes work. Three Stall heroes work. Two Rush + one Stall wastes the Stall hero's early fight contribution.
-  4. **Read your hero's specializations before investing items.** Don't stack Crit items on a hero whose best path rewards ability casting.
-  5. **Don't hoard gold waiting for a "perfect" hero.** Buy what the shop offers and adapt. The game is designed around adaptation, not fishing for specific heroes.
-  6. **Once you have a clear carry, rank them up.** A rank-2 carry with items is more impactful than three rank-1 heroes with spread-out items.
+  1. **Start with one durable hero + one damage dealer** as your first two heroes. This covers the two most essential functions.
+  2. **Your third hero fills the gap.** If fights are slow, add damage. If your frontline is dying, add durability. If neither is a problem, add a support hero.
+  3. **Pick heroes that work well together.** Heroes that benefit from the same types of items and relics create stronger teams.
+  4. **Read specializations before investing items.** Align your purchases with the path you plan to take.
+  5. **Adapt to what the shop offers.** The game is designed around adaptation (L002). Don't wait for a specific hero — work with what is available.
+  6. **Once you have a core team, strengthen it.** A stronger core is often better than a wider but weaker roster.
 
 evidenceType: editorial-recommendation
 sourceRefs: [L001, L002]
@@ -208,15 +152,15 @@ sourceRefs: [L001, L002]
 
 heading: Mistakes New Players Make
 body: |
-  **Picking three damage dealers with no frontline.** This works on Base difficulty and fails hard by Index 3-4. You need at least one hero that can absorb damage.
+  **All damage, no durability.** A team of pure damage dealers can work at the easiest levels but collapses when enemies start surviving long enough to fight back. Include at least one hero that can absorb damage.
 
-  **Picking heroes of mixed keywords without a plan.** A Rush Assassin alongside a Stall Mage means each spends half the fight doing suboptimal damage.
+  **Mixing incompatible approaches.** If your team is built for fast fights, a hero that only becomes effective in long fights contributes little. Align your hero picks with a consistent direction.
 
-  **Never ranking up heroes.** Players coming from games where "wider board = better" often spread gold across many rank-1 heroes. In Guildrun, a rank-2 carry with items can solo-carry through mid-difficulty runs.
+  **Never strengthening heroes.** Spreading resources across many weak heroes is often less effective than concentrating power on a few stronger ones.
 
-  **Judging a hero only by their class.** A Duelist on a tank-oriented specialization path can frontline. A Mystic on a damage path can carry. Class is a starting point, not a destiny.
+  **Judging a hero only by their starting role.** Specializations can change what a hero contributes. A hero drafted for one purpose may serve a different purpose after choosing the right path.
 
-  **Ignoring the Reserve.** Backup heroes provide passive value. An empty bench is wasted potential.
+  **Ignoring the bench.** Some heroes may provide benefits even when not actively fighting. An empty bench is missed potential.
 
 evidenceType: editorial-recommendation
 sourceRefs: [L001, L002]
@@ -227,15 +171,15 @@ heading: What We Cannot Tell You (Yet)
 body: |
   This guide intentionally does not provide:
 
-  **Individual hero tier rankings.** The demo has been available for approximately 11 days. No systematic hero analysis exists from a large enough sample of players. Creating a tier list now would be guessing, not guiding.
+  **Individual hero tier rankings.** The demo is approximately 11 days old. No systematic hero analysis exists from a large enough sample of players.
 
-  **"Best hero for beginners."** Without confirmed data on hero unlock order, starting stats, or difficulty-specific performance, any "best hero" recommendation would be fabricated.
+  **"Best hero for beginners."** Without confirmed data on hero unlock order, starting attributes, or difficulty-specific performance, any recommendation would be fabricated.
 
-  **Hero-specific builds.** While the game has 25 heroes and 75 specialization paths, building a specific hero guide requires confirmed ability data, scaling numbers, and relic interactions — which are not publicly documented by the developer and have not been independently verified by a large community.
+  **Hero-specific builds.** Building a specific hero guide requires confirmed ability data, scaling numbers, and relic interactions — which are not publicly documented by the developer.
 
-  **Class tier list.** The community is still debating basic hero strength. Some heroes' classes are not independently confirmed outside of the Steam store description.
+  **Class tier list.** Specific class names, keywords, and mechanics are not confirmed in official developer documentation.
 
-  When more community data emerges — particularly from Endless leaderboards, high-difficulty clear documentation, and developer updates — this guide will be updated with specific hero recommendations.
+  When official data or verified community research becomes available, this guide will be updated.
 
 evidenceType: uncertainty
 sourceRefs: [L002]
@@ -246,22 +190,22 @@ heading: Frequently Asked Questions
 body: |
 
   **Q: How many heroes are in the Guildrun demo?**
-  A: 25 heroes across 7 classes, according to the official Steam store page and developer FAQ.
+  A: 25 heroes, according to the official Steam store page (L001) and developer FAQ (L002).
 
-  **Q: Which class is best for beginners?**
-  A: There is no single best class. Tank + Warrior is a forgiving starting combination: the Tank absorbs damage while the Warrior deals it. As you learn the systems, experiment with other classes.
+  **Q: Which hero type is best for beginners?**
+  A: There is no single best type. A durable hero plus a damage dealer is a forgiving starting combination. As you learn the systems, experiment with different hero types.
 
-  **Q: Should I pick all heroes with the same keyword?**
-  A: Generally yes. Rush heroes work best together because Rush effects activate early. Stall heroes work best together because Stall effects activate later. Mixing Rush and Stall without a specific plan wastes hero potential.
+  **Q: Should I pick heroes that work well together?**
+  A: Yes. Heroes that benefit from the same types of items and relics create stronger, more focused teams than heroes pulling in different directions.
 
-  **Q: How many frontline heroes do I need?**
-  A: At least one. Two if fights are lasting long and your first frontline is dying before the fight ends. Zero frontline works on Base difficulty but fails quickly at higher difficulties.
+  **Q: How many damage-absorbing heroes do I need?**
+  A: At least one in most situations. Two if fights are lasting long and your first frontline is dying.
 
   **Q: Can I change my hero's specialization during a run?**
-  A: This has not been independently confirmed from official sources. The Steam store page and developer FAQ mention specializations but do not specify whether choices are permanent within a run. This FAQ will be updated when developer or community testing data becomes available.
+  A: This has not been independently confirmed from official sources. The developer mentions specializations (L002) but does not specify whether choices are permanent within a run.
 
-  **Q: Do reserve heroes get experience or items?**
-  A: Reserve heroes with the Backup keyword provide their effects while benched, according to community reference data. Non-Backup reserve heroes provide no benefit until swapped into the active team.
+  **Q: Do reserve heroes provide any benefit?**
+  A: Community reference sources suggest some heroes may provide effects while not actively fighting (a "Backup" concept), but the exact mechanics have not been confirmed in official developer documentation.
 
 evidenceType: confirmed-fact
 sourceRefs: [L001, L002]
@@ -271,25 +215,22 @@ sourceRefs: [L001, L002]
 | Fact | Detail |
 |------|--------|
 | Hero count (demo) | 25 heroes |
-| Classes | 7 (Warrior, Vanguard, Tank, Duelist, Assassin, Mage, Mystic) |
-| Specialization paths | 3 per hero, 75 total |
-| Keywords | Rush: Warrior, Vanguard, Assassin, Duelist / Stall: Tank, Duelist, Mystic, Mage |
-| Team size | Up to 3 active heroes (plus reserve bench) |
-| Rank-up bonus | +25% HP, +25 Attack, +20 Attack Speed |
-| Item slot gating | Rank-gated at Index 4 (S difficulty) and above |
-| Reserve benefit | Backup keyword heroes provide effects from bench |
+| Specialization paths | 3 per hero (75 total), or 180 total specializations — two different counts exist in official sources |
+| Design principle | Adaptation: evolve heroes through upgrades, paths, items, and relics each run |
+| Team approach | No fixed best team — success depends on adapting to run-specific options |
+| Source | Steam store (L001), Developer FAQ (L002) |
 
 ## relatedGuides
-- /builds
+- /relics
 - /rush-mechanic
 - /reserve-heroes
-- /difficulty-endless
+- /beginner-guide
 
 ## uncertainties
-- Individual hero names, base stats, and abilities are not confirmed by developer documentation and cannot be independently verified from public sources
-- Specialization path details (whether choices are permanent within a run, exact effects) are not publicly documented
-- Community consensus on hero strength does not yet exist — the demo is approximately 11 days old
-- Unlock order for heroes is not documented in official sources
+- Specific hero names, classes, and abilities are not confirmed by official developer documentation
+- Specialization path details (permanence, exact effects) are not publicly documented
+- Hero unlock order and starting attributes are unknown
+- The two different specialization counts (75 vs 180) from official sources may represent different counting methods
 
 ## blockers
-- None. This guide fulfills the search intent for "Guildrun heroes," "how to choose heroes in Guildrun," and related queries by explaining the class system, team-building logic, and hero-selection strategy using confirmed official facts. It does not claim to provide a hero database, tier list, or hero-specific builds.
+- None. This guide fulfills search intent for "Guildrun heroes" and "how to choose heroes" by explaining hero selection strategy and team-building principles using confirmed official facts (hero count, specialization system, adaptation design). It does not claim to provide a hero database, tier list, hero-specific builds, or unverified specific mechanics.

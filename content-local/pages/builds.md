@@ -41,7 +41,7 @@ body: |
   1. **Are you winning fights comfortably?** Keep doing what you are doing. Don't pivot a winning strategy.
   2. **Are you winning but barely?** Identify the bottleneck: damage too low, frontline dying, fights taking too long. Address the weakest link.
   3. **Are you losing fights?** Diagnose why: burst damage killing your frontline (need more Defense/HP), enemies outlasting your Rush window (need Stall/scaling), carry dying early (need positioning or protection).
-  4. **Are you surviving but not killing?** Check damage types. Physical damage is reduced by enemy Defense; magical damage bypasses it. If enemies have high Defense, add a Mage.
+  4. **Are you surviving but not killing?** Check damage types. Different damage types may have different effectiveness against different enemies. If enemies have high Defense, add a Mage.
 
 evidenceType: editorial-recommendation
 sourceRefs: [L001, L002]
@@ -58,7 +58,7 @@ body: |
 
   **Relic priorities:** On-kill effects, Attack Speed amplification, first-strike bonuses.
 
-  **Positioning:** Fastest heroes in front rows (y=2 or 3) for earliest enemy contact.
+  **Positioning:** Fastest heroes in front rows (closer to enemy contact) for earliest enemy contact.
 
   **When Rush works:** Lower difficulties, early/mid-game, farming Shards quickly.
   **When Rush fails:** High Defense enemies, deep Endless, difficulties where enemy HP exceeds your burst ceiling.
@@ -80,7 +80,7 @@ body: |
 
   **Relic priorities:** Flexible — this framework can tilt Rush or Stall depending on relics.
 
-  **Positioning:** Frontline in rows 2-3, backline in rows 0-1.
+  **Positioning:** Frontline in closer to enemy contact, with damage dealers positioned further back.
 
   **Why it works for beginners:** This is the most forgiving framework. You have clear roles (tank and DPS), clear item priorities (Defense on tanks, damage on carries), and margin for error — one hero dying doesn't necessarily end the run.
 
@@ -99,10 +99,10 @@ body: |
 
   **Relic priorities:** Defense scaling, healing/regen, DoT amplification, The-Storm-related relics.
 
-  **Positioning:** Tanks in row 3 (absolute front), casters in rows 0-1.
+  **Positioning:** Tanks in closest to enemies.
 
-  **When Sustain works:** Higher difficulties (Index 3+), Endless, fights where Rush burst cannot kill within the window.
-  **When Sustain fails:** The Storm kills everyone around 65-75 seconds. Too many Defense items with no damage output leads to timeout losses.
+  **When Sustain works:** Higher difficulties (higher difficulties), Endless, fights where Rush burst cannot kill within the window.
+  **When Sustain fails:** Fights have a time limit; stalling indefinitely is not possible. Too many Defense items with no damage output leads to timeout losses.
 
 evidenceType: editorial-recommendation
 sourceRefs: [L001, L002]
@@ -130,7 +130,7 @@ sourceRefs: [L001, L002]
 
 heading: Scaling and Endless — Build for the Long Game
 body: |
-  Endless mode features quadratic enemy scaling. Your build must scale to match:
+  Endless mode features increasingly difficult enemy scaling. Your build must scale to match:
 
   **Hero composition:** Heroes with scaling passives, DoT stacking, or percentage-based damage.
 
@@ -157,7 +157,7 @@ body: |
   - **Single-Carry:** Stack everything on one hero. Relics that buff a single target.
   - **Scaling/Endless:** Items/relics with cumulative effects. Economy to buy more items over time.
 
-  A common mistake: taking a powerful relic that contradicts your build direction. A Rush comp with a scaling relic has a relic doing nothing for the first 5+ floors.
+  A common mistake: taking a powerful relic that contradicts your build direction. A Rush comp with a scaling relic has a relic doing nothing for several floors.
 
 evidenceType: editorial-recommendation
 sourceRefs: [L001, L002]
@@ -185,11 +185,11 @@ body: |
   Do not pivot when:
 
   1. Your build is working — even if it's not "optimal."
-  2. You have invested in 3+ synergistic relics that would be wasted.
+  2. You have invested in several synergistic relics that would be wasted.
   3. The tempting relic does not match your drafted heroes.
   4. You are past mid-game and the pivot requires rebuilding items.
 
-  A safe rule: if your team cleared the last 3 floors without losses, stay the course.
+  A safe rule: if your team cleared the last few floors without losses, stay the course.
 
 evidenceType: editorial-recommendation
 sourceRefs: [L002]

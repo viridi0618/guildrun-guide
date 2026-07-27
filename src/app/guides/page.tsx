@@ -7,12 +7,12 @@ import JsonLd from "@/components/JsonLd";
 
 const groups: Record<string, string[]> = {
   "Start Here": ["beginner-guide", "release-date"],
-  "Core Mechanics": ["rush-mechanic", "reserve-heroes", "shop-guide", "difficulty-endless"],
-  Strategy: ["heroes", "relics", "builds"],
+  "Core Mechanics": ["rush-mechanic", "reserve-heroes", "shop-guide"],
+  Strategy: ["heroes", "relics"],
 };
 
-const title = "Guildrun Guides — Beginner, Heroes, Builds & Mechanics";
-const description = "Browse source-reviewed Guildrun guides for beginners, heroes, relics, builds, Rush, reserve units, difficulty progression, Endless mode, shops, and release information.";
+const title = "Guildrun Guides — Beginner, Heroes, Relics & Mechanics";
+const description = "Browse source-reviewed Guildrun guides for beginners, heroes, relics, Rush, reserve units, shop strategy, and release information.";
 
 export const metadata: Metadata = {
   title: { absolute: title },
