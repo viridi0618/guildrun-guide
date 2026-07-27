@@ -5,6 +5,9 @@ import type { ContentStatus, EvidenceBlock, EvidenceType, GuideRecord, QuickFact
 const contentRoot = path.join(process.cwd(), "content-input");
 const pageRoot = path.join(contentRoot, "pages");
 
+const localRoot = path.join(process.cwd(), "content-local");
+const localPageRoot = path.join(localRoot, "pages");
+
 function between(text: string, start: string, end?: string) {
   const startIndex = text.indexOf(start);
   if (startIndex < 0) return "";
@@ -14,7 +17,7 @@ function between(text: string, start: string, end?: string) {
 }
 
 function metadata(text: string, key: string) {
-  return text.match(new RegExp(`^${key}:\\s*(.+)$`, "m"))?.[1].trim() ?? "";
+  return text.match(new RegExp(`^${key}:\s*(.+)$`, "m"))?.[1].trim() ?? "";
 }
 
 function listSection(text: string, heading: string, nextHeading?: string) {
@@ -74,12 +77,12 @@ function parseGuide(file: string): GuideRecord {
 }
 
 function sourceField(block: string, key: string) {
-  return block.match(new RegExp(`^- ${key}:\\s*(.+)$`, "m"))?.[1].trim() ?? "";
+  return block.match(new RegExp(`^- ${key}:\s*(.+)$`, "m"))?.[1].trim() ?? "";
 }
 
-function parseSources(): Source[] {
-  const text = fs.readFileSync(path.join(contentRoot, "SOURCE_LOG_V2.md"), "utf8");
-  return [...text.matchAll(/^###\s+(S\d{2}b?)\s+—\s+(.+)\r?\n([\s\S]*?)(?=^###\s+S|^##\s+|(?![\s\S]))/gm)].map((match) => {
+function parseSourcesFromPath(sourceRoot: string, sourceFileName: string): Source[] {
+  const text = fs.readFileSync(path.join(sourceRoot, sourceFileName), "utf8");
+  return [...text.matchAll(/^###\s+([SL]\d{2,3}[a-z]?)\s+—\s+(.+)\r?\n([\s\S]*?)(?=^###\s+[SL]|^##\s+|(?!\s\S]))/gm)].map((match) => {
     const rawPublished = sourceField(match[3], "publishedAt");
     const usedFor = sourceField(match[3], "usedFor").replace(/^\[|\]$/g, "").split(",").map((value) => value.trim()).filter(Boolean);
     return {
@@ -95,8 +98,42 @@ function parseSources(): Source[] {
   });
 }
 
-export const guides = fs.readdirSync(pageRoot).filter((name) => name.endsWith(".md")).sort().map((name) => parseGuide(path.join(pageRoot, name)));
-export const sources = parseSources();
+function mergeGuides(imported: GuideRecord[], local: GuideRecord[]): GuideRecord[] {
+  // Check for duplicate slugs within each layer
+  const importedSlugSet = new Set(imported.map(g => g.slug));
+  if (importedSlugSet.size !== imported.length) {
+    throw new Error("Duplicate slug in imported layer");
+  }
+
+  const localSlugsSet = new Set<string>();
+  const result = [...imported];
+  for (const localGuide of local) {
+    if (localSlugsSet.has(localGuide.slug)) {
+      throw new Error(`Duplicate slug in local layer: ${localGuide.slug}`);
+    }
+    localSlugsSet.add(localGuide.slug);
+
+    const existingIdx = result.findIndex(g => g.slug === localGuide.slug);
+    if (existingIdx >= 0) {
+      console.log(`[content] Local override: ${localGuide.slug}`);
+      result[existingIdx] = localGuide;
+    } else {
+      result.push(localGuide);
+    }
+  }
+  return result;
+}
+
+// Parse guides from both layers
+export const importedGuides: GuideRecord[] = fs.readdirSync(pageRoot).filter((name) => name.endsWith(".md")).sort().map((name) => parseGuide(path.join(pageRoot, name)));
+export const localGuides: GuideRecord[] = fs.readdirSync(localPageRoot).filter((name) => name.endsWith(".md")).sort().map((name) => parseGuide(path.join(localPageRoot, name)));
+export const guides = mergeGuides(importedGuides, localGuides);
+
+// Parse sources from both layers
+export const importedSources = parseSourcesFromPath(contentRoot, "SOURCE_LOG_V2.md");
+export const localSources = parseSourcesFromPath(localRoot, "SOURCE_LOG.md");
+export const sources = [...importedSources, ...localSources];
+
 export const routedGuides = guides.filter((guide) => guide.contentStatus === "ready" || guide.contentStatus === "review");
 export const readyGuides = guides.filter((guide) => guide.contentStatus === "ready" && guide.indexable);
 export const reviewGuides = guides.filter((guide) => guide.contentStatus === "review" && !guide.indexable);
