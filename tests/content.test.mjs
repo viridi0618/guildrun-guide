@@ -75,6 +75,12 @@ test("L001 etc. local sources are parseable", () => {
   assert.ok(combinedSourceIds.some((id) => id.startsWith("S")), "combined source IDs should include S-prefixed IDs");
 });
 
+test("release-date FAQPage schema and visible heading match", () => {
+  const releaseHtml = fs.readFileSync(exportedHtml(out, "release-date"), "utf8");
+  assert.match(releaseHtml, /"@type":"FAQPage"/);
+  assert.match(releaseHtml, /Frequently Asked Questions/);
+});
+
 test("L003 is completely removed", () => {
   assert.ok(!combinedSourceIds.includes("L003"), "L003 must not appear in combined source IDs");
   const sourceLog = fs.readFileSync(path.join(root, "content-local", "SOURCE_LOG.md"), "utf8");
