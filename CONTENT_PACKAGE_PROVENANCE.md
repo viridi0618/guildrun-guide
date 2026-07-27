@@ -35,3 +35,15 @@ The package was imported byte-for-byte from Package Head Commit D after validati
 | `content-input/scripts/validate_content_package.py` | `10920f77ee8087dfe10677f12c8a503eba16cb8769c30fb51b08690c28517177` |
 | `content-input/SOURCE_LOG.md` | `df548a65a78bda2afe24f46a8dd10c1cd1a327aa70bae04eae5c5ad21720dc72` |
 | `content-input/SOURCE_LOG_V2.md` | `9a2ebed9c0747d79f3932fd810a03eeec5c011d273a40968ec970033f1659503` |
+
+
+## Local extension layer
+
+`content-local/` is not part of the original imported package from `viridi0618/guildrun-content-site`. It is maintained directly in this repository and is not subject to the imported package hash validation.
+
+- **localPagesDir:** `content-local/pages/`
+- **localSourceLog:** `content-local/SOURCE_LOG.md`
+- **sourceIdPrefix:** L (L001, L002, ...)
+- **createdAt:** 2026-07-27
+
+Local pages can override imported pages by matching slug, or add new guides with unique slugs. Overrides are logged at build time.

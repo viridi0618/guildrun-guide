@@ -100,6 +100,24 @@ export const guideImages = {
     height: 1080,
     objectPosition: "50% 42%",
   },
+  heroes: {
+    src: "/images/guildrun/reserve-heroes.webp",
+    alt: "Four Guildrun heroes posed together, representing the 25-hero roster available in the demo",
+    sourceUrl: "https://static.wixstatic.com/media/029bb4_d75cd7b0c3ad4fb29913acc6a81c91e7~mv2.png/v1/fill/w_980%2Ch_971%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/SomeHeroes.png",
+    credit: "Leyline / Guildrun official media",
+    width: 980,
+    height: 971,
+    objectPosition: "50% 35%",
+  },
+  relics: {
+    src: "/images/guildrun/builds.webp",
+    alt: "Guildrun hero display backdrop with layered light streaks, representing the depth of relic choices",
+    sourceUrl: "https://static.wixstatic.com/media/029bb4_8b7ae2afd2304cd0b55923db5fae2ffa~mv2.png/v1/fill/w_980%2Ch_477%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/heroesbackdrop.png",
+    credit: "Leyline / Guildrun official media",
+    width: 980,
+    height: 477,
+    objectPosition: "50% 50%",
+  },
 } as const satisfies Record<string, GuideImage>;
 
 export function getGuideImage(slug: string): GuideImage | undefined {

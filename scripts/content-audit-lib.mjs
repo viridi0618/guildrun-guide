@@ -1,13 +1,13 @@
 import fs from "node:fs";
 import path from "node:path";
 
-export const root = process.cwd();
+const root = process.cwd();
 export const inputRoot = path.join(root, "content-input");
 export const pageRoot = path.join(inputRoot, "pages");
-export const expectedReady = ["beginner-guide", "difficulty-endless", "release-date", "reserve-heroes", "rush-mechanic", "shop-guide"];
-export const expectedReview = ["beginner-mistakes", "builds", "tier-list"];
+export const localPageRoot = path.join(root, "content-local", "pages");
+export { root };
 
-const metadata = (text, key) => text.match(new RegExp(`^${key}:\\s*(.+)$`, "m"))?.[1].trim() ?? "";
+const metadata = (text, key) => text.match(new RegExp(`^${key}:\s*(.+)$`, "m"))?.[1].trim() ?? "";
 const between = (text, start, end) => {
   const first = text.indexOf(start); if (first < 0) return "";
   const from = first + start.length; const last = end ? text.indexOf(end, from) : -1;
@@ -28,11 +28,51 @@ export function parsePage(file) {
     directAnswer: between(text, "## directAnswer", "## sections"), sectionsText, sectionCount, evidenceCount, sourceRefs, blockers,
   };
 }
+
+function mergePages(imported, local) {
+  const importedSlugs = new Set(imported.map(p => p.slug));
+  if (importedSlugs.size !== imported.length) throw new Error("Duplicate slug in imported layer");
+
+  const localSlugSet = new Set();
+  const result = [...imported];
+  for (const localPage of local) {
+    if (localSlugSet.has(localPage.slug)) throw new Error(`Duplicate slug in local layer: ${localPage.slug}`);
+    localSlugSet.add(localPage.slug);
+    const idx = result.findIndex(p => p.slug === localPage.slug);
+    if (idx >= 0) {
+      console.log(`[audit-lib] Local override: ${localPage.slug}`);
+      result[idx] = localPage;
+    } else {
+      result.push(localPage);
+    }
+  }
+  return result;
+}
+
 export function loadModel() {
-  const pages = fs.readdirSync(pageRoot).filter((name) => name.endsWith(".md")).sort().map((name) => parsePage(path.join(pageRoot, name)));
-  const sourceText = fs.readFileSync(path.join(inputRoot, "SOURCE_LOG_V2.md"), "utf8");
-  const sourceIds = [...sourceText.matchAll(/^###\s+(S\d{2}b?)\s+—/gm)].map((match) => match[1]);
-  return { pages, sourceText, sourceIds };
+  const importedPages = fs.readdirSync(pageRoot).filter((name) => name.endsWith(".md")).sort().map((name) => parsePage(path.join(pageRoot, name)));
+  const localPages = fs.existsSync(localPageRoot)
+    ? fs.readdirSync(localPageRoot).filter((name) => name.endsWith(".md")).sort().map((name) => parsePage(path.join(localPageRoot, name)))
+    : [];
+  const pages = mergePages(importedPages, localPages);
+
+  // Parse source IDs from both source logs
+  const importedSourceText = fs.readFileSync(path.join(inputRoot, "SOURCE_LOG_V2.md"), "utf8");
+  const localSourcePath = path.join(root, "content-local", "SOURCE_LOG.md");
+  const localSourceText = fs.existsSync(localSourcePath) ? fs.readFileSync(localSourcePath, "utf8") : "";
+
+  const sourceIdRegex = /^###\s+((?:S|L)\d{2,3}[a-z]?)\s+—/gm;
+  const importedSourceIds = [...importedSourceText.matchAll(sourceIdRegex)].map((match) => match[1]);
+  const localSourceIds = localSourceText ? [...localSourceText.matchAll(sourceIdRegex)].map((match) => match[1]) : [];
+
+  const sourceIds = [...importedSourceIds, ...localSourceIds];
+  const combinedSourceIds = sourceIds;
+  const sourceText = importedSourceText + (localSourceText ? "\n" + localSourceText : "");
+
+  const ready = pages.filter((page) => page.status === "ready" && page.indexable).map((page) => page.slug).sort();
+  const review = pages.filter((page) => page.status === "review" && !page.indexable).map((page) => page.slug).sort();
+
+  return { pages, sourceText, sourceIds, combinedSourceIds, ready, review, importedSourceIds, localSourceIds };
 }
 
 export function exportedHtml(out, slug) {

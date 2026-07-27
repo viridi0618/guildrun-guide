@@ -26,15 +26,20 @@ function faqItems(body: string) {
   return [...body.matchAll(/\*\*Q:\s*([^*]+)\*\*\s*\r?\nA:\s*([^\r\n]+)/g)].map((match) => ({ question: match[1].trim(), answer: match[2].trim() }));
 }
 
+function isFaqSection(name: string): boolean {
+  const normalized = name.trim().toLowerCase();
+  return normalized === "faq" || normalized === "frequently asked questions";
+}
+
 export default async function Page({ params }: SlugPageProps) {
   const { slug } = await params;
   const guide = getGuide(slug);
   if (!guide) notFound();
   const related = guide.relatedGuides.map((relatedSlug) => guides.find((item) => item.slug === relatedSlug)).filter((item): item is NonNullable<typeof item> => Boolean(item)).filter((item) => readyGuides.some((ready) => ready.slug === item.slug));
-  const faqs = guide.sections.filter((section) => /faq/i.test(section.name)).flatMap((section) => section.blocks.flatMap((block) => faqItems(block.body)));
+  const faqs = guide.sections.filter((section) => isFaqSection(section.name)).flatMap((section) => section.blocks.flatMap((block) => faqItems(block.body)));
   const schemas: Record<string, unknown>[] = [
     { "@context": "https://schema.org", "@type": "Article", headline: guide.h1, description: guide.description, dateModified: guide.lastReviewed, mainEntityOfPage: absoluteUrl(`/${guide.slug}`), isPartOf: { "@type": "WebSite", name: siteConfig.siteName, url: absoluteUrl("/") } },
-    { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") }, { "@type": "ListItem", position: 2, name: guide.h1, item: absoluteUrl(`/${guide.slug}`) }] },
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") }, { "@type": "ListItem", position: 2, name: "Guides", item: absoluteUrl("/guides") }, { "@type": "ListItem", position: 3, name: guide.h1, item: absoluteUrl(`/${guide.slug}`) }] },
   ];
   if (faqs.length) schemas.push({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) });
   return <><JsonLd data={schemas} /><GuidePage guide={guide} sources={getGuideSources(guide)} related={related} /></>;
