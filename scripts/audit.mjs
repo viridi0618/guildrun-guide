@@ -71,7 +71,11 @@ if (mode === "routes") {
   for (const page of pages) {
     assert(page.directAnswer && page.sectionCount > 0 && page.evidenceCount > 0, `${page.slug} is structurally incomplete`);
     assert(page.sourceRefs.every((id) => combinedSourceIds.includes(id)), `${page.slug} has dangling sourceRefs`);
-    if (page.status === "ready") assert(page.blockers.length === 0 && !/\b(?:TODO|TBD)\b|to be filled|Requires source/i.test(page.text), `${page.slug} fails ready gate`);
+    if (page.status === "ready") {
+    const placeholderPattern = /\bTODO\b|to be filled|Requires source|placeholder content|lorem ipsum/i;
+    assert(page.blockers.length === 0, `${page.slug} fails ready gate: has blockers`);
+    assert(!placeholderPattern.test(page.text), `${page.slug} fails ready gate: contains placeholder content`);
+  }
   }
   const provenance = fs.readFileSync(path.join(root, "CONTENT_PACKAGE_PROVENANCE.md"), "utf8");
   assert(provenance.includes("4e5daabd9d41cd1d40eac5ae5bd4e9fcf41860bc") && provenance.includes("eaad2c1c4abdc3580d072befe8ea1408bade5c9f"), "locked provenance commits are missing");
