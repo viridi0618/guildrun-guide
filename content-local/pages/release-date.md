@@ -197,9 +197,9 @@ body: |
 evidenceType: uncertainty
 sourceRefs: [L002]
 
-### FAQ
+### Frequently Asked Questions
 
-heading: FAQ
+heading: Frequently Asked Questions
 body: |
   **Q: When does Guildrun come out?**
   A: There is no confirmed release date. The Steam store says "TBA." The developer is aiming for a 2027 release. No specific month or quarter has been announced.
