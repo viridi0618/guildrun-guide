@@ -36,7 +36,7 @@ sourceRefs: [L001, L002]
 heading: Relics vs Hero Items
 body: |
   A common confusion for new players is the difference between relics and hero items.
-  
+
   - **Relics** are global. One relic affects your entire team for the rest of the run. You choose relics at specific decision points (draft nodes, shops, events).
   - **Hero Items** are per-hero. Each hero has equipment slots, and items only affect that specific hero's stats or abilities.
   - **Persistence**: Relics persist for the entire run once acquired. Some hero items may be swapped, sold, or consumed.
@@ -138,7 +138,7 @@ body: |
   - Some triggers are "win-more" (only fire when you are already winning).
   - Others are "comeback" mechanics (fire when a hero is low HP).
   - Evaluate trigger relics by estimating trigger frequency: if a relic triggers "on hero death," how often do your heroes die? If rarely, the relic is wasted.
-  
+
   The best trigger relics are those whose conditions align with your team's natural combat pattern — they trigger passively without changing how you play.
 evidenceType: editorial-recommendation
 sourceRefs: [L001]
@@ -267,4 +267,4 @@ sourceRefs: [L001, L002]
 
 ## blockers
 
-- None. All relic information is based on publicly available Steam store text (L001) and developer FAQ (L002). Strategy advice is clearly labeled as editorial recommendation.
+- None. All relic information is based on publicly available Steam store text (L001) and developer FAQ (L002). Strategy advice is clearly labeled as editorial recommendation.\n
