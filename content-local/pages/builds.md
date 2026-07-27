@@ -1,291 +1,253 @@
-# /builds — Guildrun Builds & Team Comps Guide
+# /builds — Guildrun Builds & Team Comps Guide: Rush, Sustain & Endless
 
 slug: builds
 title: Guildrun Builds & Team Comps Guide — Rush, Sustain & Endless
 h1: Guildrun Builds & Team Comps Guide
-description: Comprehensive Guildrun builds and team composition guide. Learn rush frameworks, frontline+backline structures, sustain/stall, single-carry, scaling/Endless comps, when to pivot, and common build collapse reasons. Includes community-reported strategies and safe evaluation of build claims.
-recommendedStatus: ready
-recommendedIndexable: true
+description: Learn how to build Guildrun teams around Rush, frontline survival, scaling, single carries, and Endless, with pivoting advice and framework guidance.
+recommendedStatus: review
+recommendedIndexable: false
 lastReviewed: 2026-07-27
-versionContext: Demo / Early Access preview — based on developer FAQ and Steam store page as of July 2026
+versionContext: Steam demo (released 2026-07-16); build frameworks are editorial and based on confirmed game mechanics from official sources
 
 ## directAnswer
 
-There is no fixed "best team" in Guildrun. The developer FAQ (L002) explicitly states that adaptation is a core design principle — the game rewards players who diagnose their team's gaps and adjust rather than following a static tier list. A successful build depends on your difficulty tier, available heroes, relics you find, and the specific dungeon modifiers active. This guide provides frameworks for building effective teams: Rush compositions for fast clears, Frontline+Backline structures for balanced runs, Sustain/Stall for high-difficulty survival, Single-Carry setups for focused power, and Scaling/Endless comps for the longest runs. It also covers how to choose items and relics to support your direction, when to pivot, when not to pivot, the most common reasons builds collapse, and how to safely evaluate community build claims.
+Guildrun builds are defined by your strategic direction rather than fixed hero-plus-item formulas. The game's design — confirmed by the Steam store page and developer FAQ — emphasizes adaptation: every run offers different heroes, items, and relics, and success depends on how you respond. This guide provides decision-making frameworks for Rush, frontline-plus-backline, scaling, and Endless builds, and clear guidance on when to pivot your strategy and when to stay the course. There is no one best team in Guildrun — there is only the team that best fits your current run.
 
 ## sections
 
-### Why There Is No Fixed Best Team
+### Why Guildrun Does Not Have One Fixed Best Team
 
-heading: Why There Is No Fixed Best Team
+heading: Adaptation Is the Design
 body: |
-  The Guildrun developer FAQ (L002) confirms that the game is built around adaptation. Heroes, relics, and enemy modifiers are procedurally combined so that no single team composition dominates every run. This is not a design flaw — it is the core loop.
+  The developer FAQ states: "Each run lets you evolve your heroes through upgrades, paths, items, and relics, creating new strategies every time. Success depends on how you build your team and adapt to the challenges you face."
 
-  Key reasons why tier lists fail in Guildrun:
-  - **Relic RNG**: A C-tier hero with the right relics can outperform an S-tier hero with anti-synergy relics.
-  - **Difficulty scaling**: Teams that breeze through Normal may collapse on SS because enemy scaling exposes different weaknesses.
-  - **Floor modifiers**: Some floors punish specific archetypes (e.g., anti-heal zones cripple sustain comps).
-  - **Hero availability**: You cannot always draft your preferred heroes. Flexibility beats rigidity.
+  This means:
+  - Your available heroes are random each run
+  - Shop offerings (items, hero duplicates) are random
+  - Relic drops are random
+  - Enemy compositions vary by difficulty and act
 
-  The correct approach: learn to diagnose your team's gaps, not memorize a tier list.
+  A build guide that says "always pick X, Y, and Z heroes with items A, B, and C" is wrong by design. The game does not guarantee you will see those heroes or items. Good Guildrun builds are frameworks — decision-making structures — not shopping lists.
+
 evidenceType: confirmed-fact
-sourceRefs: [L002]
+sourceRefs: [L001, L002]
 
-### Diagnosing Team Gaps
+### How to Diagnose What Your Current Team Lacks
 
-heading: Diagnosing Team Gaps
+heading: Start Every Build Decision with Diagnosis
 body: |
-  Before committing to a build direction, diagnose what your current team lacks:
+  Before committing to a build direction, assess your current state:
 
-  1. **Frontline gap**: Is your tank or frontliner dying too fast? → Add sustain, defense items, or a second frontline hero.
-  2. **Damage gap**: Are enemies surviving too long, leading to attrition? → Add DPS heroes, offensive relics, or burst items.
-  3. **Healing gap**: Is chip damage adding up with no recovery? → Add a dedicated healer or life-steal mechanics.
-  4. **Speed gap**: Are you timing out on floors? → Add speed relics, faster heroes, or rush-oriented items.
-  5. **Scaling gap**: Is your power plateauing while enemy HP keeps rising? → Add scaling relics or heroes that grow over time.
-  6. **Gold gap**: Cannot afford key purchases? → Prioritize economy relics or discount items.
+  1. **Are you winning fights comfortably?** Keep doing what you are doing. Don't pivot a winning strategy.
+  2. **Are you winning but barely?** Identify the bottleneck: damage too low, frontline dying, fights taking too long. Address the weakest link.
+  3. **Are you losing fights?** Diagnose why: burst damage killing your frontline (need more Defense/HP), enemies outlasting your Rush window (need Stall/scaling), carry dying early (need positioning or protection).
+  4. **Are you surviving but not killing?** Check damage types. Physical damage is reduced by enemy Defense; magical damage bypasses it. If enemies have high Defense, add a Mage.
 
-  Run a mental checklist after each floor: "What nearly killed me? What prevented a faster clear? What will kill me in 3 floors?" Build toward the answer.
 evidenceType: editorial-recommendation
 sourceRefs: [L001, L002]
 
-### Rush Framework
+### Rush Build Framework
 
-heading: Rush Framework
+heading: Rush Builds — Win Fast
 body: |
-  Rush compositions aim to clear floors as fast as possible — before enemies can deal significant damage. They rely on high burst damage, speed, and aggressive relics.
+  **Goal:** End fights within the Rush window (first N seconds of combat).
 
-  **Core principles:**
-  - Prioritize heroes with high attack speed and burst abilities.
-  - Choose rush relics that reward fast clears and punish slow play.
-  - Minimize defense investments — if you kill enemies before they act, you do not need HP.
-  - Rush comps are strongest on lower-to-mid difficulties where enemy HP pools are manageable.
+  **Hero composition:** 1 Vanguard or Duelist (frontline) + 2 Rush-Keyword damage dealers (Warrior, Assassin, Duelist). All three heroes should have Rush keyword.
 
-  **Risks:**
-  - Boss fights are longer; rush bonuses may fall off mid-boss.
-  - A single slow floor can cascade into a wipe if the team cannot sustain.
-  - Scaling poorly — rush comps often fall off in Endless mode.
+  **Item priorities:** Attack Speed → Crit → Attack. Stack items on your highest-DPS hero first.
 
-  **When to go Rush:** Early draft offers multiple high-damage heroes, rush relics appear early, and you are on a difficulty where enemies are not excessively tanky.
-evidenceType: editorial-recommendation
-sourceRefs: [L001]
+  **Relic priorities:** On-kill effects, Attack Speed amplification, first-strike bonuses.
 
-### Frontline + Backline
+  **Positioning:** Fastest heroes in front rows (y=2 or 3) for earliest enemy contact.
 
-heading: Frontline + Backline
-body: |
-  The most balanced and reliable composition structure: one or two frontline heroes absorb damage while backline heroes deal damage and provide support.
+  **When Rush works:** Lower difficulties, early/mid-game, farming Shards quickly.
+  **When Rush fails:** High Defense enemies, deep Endless, difficulties where enemy HP exceeds your burst ceiling.
 
-  **Frontline responsibilities:**
-  - Draw enemy aggro and survive sustained pressure.
-  - Provide crowd control (taunts, stuns, slows).
-  - Scale defense and HP through items and relics.
+  **Signs you should pivot from Rush:** Fights consistently last beyond the Rush window and enemies still have significant HP.
 
-  **Backline responsibilities:**
-  - Output consistent or burst damage.
-  - Provide healing, buffs, or utility.
-  - Scale offensive stats (attack, crit, speed).
-
-  **Why this structure works:**
-  - Damage is concentrated on heroes built to survive it.
-  - Backline can invest fully in offense without durability concerns.
-  - Flexible — works with most relic types and difficulty tiers.
-  - Easy to diagnose: if frontline dies → upgrade frontline; if nothing dies → upgrade backline.
-
-  This structure is recommended for new players and for pushing into unfamiliar difficulty tiers.
 evidenceType: editorial-recommendation
 sourceRefs: [L001, L002]
 
-### Sustain / Stall
+### Frontline Plus Backline Framework
 
-heading: Sustain / Stall
+heading: Frontline + Backline — The Reliable Core
 body: |
-  Sustain (or stall) compositions win by outlasting enemies — through healing, shields, damage reduction, and crowd control. They trade speed for safety.
+  **Goal:** 1-2 frontline heroes absorb damage while 1-2 backline heroes deal damage from safety.
 
-  **Core principles:**
-  - Stack healing and defensive relics.
-  - Include at least one dedicated healer or shield-provider.
-  - Use crowd control to reduce incoming damage.
-  - Accept slower clears in exchange for consistency.
+  **Hero composition:** 1-2 Tanks or Vanguards (frontline) + 1-2 damage dealers (any class, behind frontline).
 
-  **Strengths:**
-  - Very consistent — fewer "random" deaths from burst.
-  - Excels on high difficulties where enemy damage is extreme.
-  - Forgiving — absorbs mistakes that would wipe a rush comp.
+  **Item priorities:** Defense and HP on frontline; damage stats on backline.
 
-  **Weaknesses:**
-  - Timeout risk on floors with strict timers.
-  - Low damage output may fail boss DPS checks.
-  - Over-reliance on healing can be countered by anti-heal floor modifiers.
+  **Relic priorities:** Flexible — this framework can tilt Rush or Stall depending on relics.
 
-  **When to go Sustain:** High difficulty tiers (S, SS), early healing relics, or when your drafted heroes lack damage but have strong defensive kits.
+  **Positioning:** Frontline in rows 2-3, backline in rows 0-1.
+
+  **Why it works for beginners:** This is the most forgiving framework. You have clear roles (tank and DPS), clear item priorities (Defense on tanks, damage on carries), and margin for error — one hero dying doesn't necessarily end the run.
+
 evidenceType: editorial-recommendation
 sourceRefs: [L001, L002]
 
-### Single-Carry
+### Sustain or Longer-Fight Framework
 
-heading: Single-Carry
+heading: Sustain/Stall — Survive and Outlast
 body: |
-  A single-carry composition funnels resources into one hyper-scaled hero while the rest of the team supports them.
+  **Goal:** Survive long enough for Stall effects to activate and DoT/ability scaling to take over.
 
-  **Core principles:**
-  - Identify one hero with strong scaling and a versatile kit.
-  - Give all offensive items, relics, and gold to the carry.
-  - Support heroes focus on keeping the carry alive (heals, shields, buffs).
-  - Relics that boost a single hero are premium picks.
+  **Hero composition:** 1-2 Tanks + 1-2 Mystics or Mages with Stall keyword. All heroes should have Stall keyword.
 
-  **Strengths:**
-  - Resource efficiency — one hero with +200% stats is often stronger than four heroes with +50%.
-  - Clear win condition: keep the carry alive, and everything dies.
-  - Excellent for Endless where concentrated power scales multiplicatively.
+  **Item priorities:** Defense, HP, Mana Regen, DoT-enhancing items.
 
-  **Weaknesses:**
-  - Single point of failure: if the carry dies, the run ends.
-  - Weak to crowd control and focus-fire from enemies.
-  - Requires early identification of a carry-worthy hero.
+  **Relic priorities:** Defense scaling, healing/regen, DoT amplification, The-Storm-related relics.
 
-  **When to go Single-Carry:** Early draft offers an exceptionally strong hero, relics that boost individual heroes appear, and you are confident in your ability to protect one unit.
-evidenceType: editorial-recommendation
-sourceRefs: [L001]
+  **Positioning:** Tanks in row 3 (absolute front), casters in rows 0-1.
 
-### Scaling / Endless
+  **When Sustain works:** Higher difficulties (Index 3+), Endless, fights where Rush burst cannot kill within the window.
+  **When Sustain fails:** The Storm kills everyone around 65-75 seconds. Too many Defense items with no damage output leads to timeout losses.
 
-heading: Scaling / Endless
-body: |
-  Scaling compositions are built for the longest runs — Endless mode and high-floor clears. They prioritize relics and heroes that grow in power over time.
-
-  **Core principles:**
-  - Stack scaling relics early, even if they provide no immediate power.
-  - Choose heroes whose kits naturally scale (stack-based passives, percentage-based abilities).
-  - Economy relics gain extra value because more floors = more shops.
-  - Accept that early floors will be harder in exchange for late-game dominance.
-
-  **Strengths:**
-  - Only composition type that can handle Endless mode's exponential enemy scaling.
-  - Power curve eventually outpaces all other build types.
-  - Satisfying long-term progression.
-
-  **Weaknesses:**
-  - Highest risk of early death.
-  - Requires precise relic sequencing — bad relic order can delay your power spike by 5+ floors.
-  - Weak to early elite fights and curse nodes.
-
-  **When to go Scaling:** You are targeting Endless mode, already comfortable with the difficulty tier, or early scaling relics appear before floor 3.
 evidenceType: editorial-recommendation
 sourceRefs: [L001, L002]
 
-### Choosing Items and Relics for Your Direction
+### Single-Carry Framework
 
-heading: Choosing Items and Relics for Your Direction
+heading: Single-Carry — Feed One Hero Everything
 body: |
-  Once you have identified your build direction, every item and relic choice should reinforce it:
+  **Goal:** Identify one hero as your hard carry. All Shards, all best items, all rank-ups go to this hero.
 
-  - **Rush comp** → Speed items, burst damage relics, on-kill triggers. Avoid defensive items unless absolutely necessary.
-  - **Frontline+Backline** → Defense items on frontline, offense on backline. Relics that boost role-specific stats.
-  - **Sustain/Stall** → Healing amplification, shields, damage reduction. Relics that trigger on-heal or on-shield.
-  - **Single-Carry** → Funnel all offensive upgrades to the carry. Support heroes get utility items. Relics that buff a single hero.
-  - **Scaling/Endless** → Per-floor relics, stacking relics, economy relics. Items that provide percentage-based stats.
+  **Requirements:** A hero with high scaling potential — high base Attack Speed for Duelists, high Crit for Assassins, or strong scaling abilities for Mages.
 
-  A good decision framework: "Does this choice make my win condition stronger or just add noise?" Noise is anything that does not directly contribute to how your team wins. Minimize noise.
+  **Item priorities:** Stack on ONE hero. A carry with 3 items is dramatically stronger than three heroes with 1 item each.
+
+  **Relic priorities:** Relics that buff a single hero or reward high-damage kills.
+
+  **Risk:** If your carry dies, the run ends immediately. Vulnerable to enemy targeting that bypasses frontline.
+
+  **Mitigation:** Surround carry with tanks/supports. Consider one backup damage source (a hero with Backup keyword in reserve).
+
+evidenceType: editorial-recommendation
+sourceRefs: [L001, L002]
+
+### Scaling and Endless Framework
+
+heading: Scaling and Endless — Build for the Long Game
+body: |
+  Endless mode features quadratic enemy scaling. Your build must scale to match:
+
+  **Hero composition:** Heroes with scaling passives, DoT stacking, or percentage-based damage.
+
+  **Item priorities:** Items that compound over time (per-kill, per-floor, per-rank bonuses).
+
+  **Relic priorities:** Scaling relics with cumulative effects. Economy relics for more shop purchases.
+
+  **Pacing:** Survive early floors with minimal investment, then outscale the enemy curve. In Endless, early power matters less than late scaling.
+
+  The Steam store page advertises "Endless mode to chase the top of the global leaderboards" (L001).
+
+evidenceType: editorial-recommendation
+sourceRefs: [L001, L002]
+
+### How to Choose Items and Relics for a Direction
+
+heading: Aligning Items and Relics with Your Build
+body: |
+  Once you have chosen a build direction, every item and relic decision should support it:
+
+  - **Rush:** Attack Speed, Crit, on-kill effects. Avoid Stall-keyword items that only activate after N seconds.
+  - **Frontline+Backline:** Balanced approach — Defense items for tanks, damage items for carries. Flexible relics.
+  - **Sustain/Stall:** Defense, HP, healing, DoT. Avoid Rush-only items that deactivate when you need them most.
+  - **Single-Carry:** Stack everything on one hero. Relics that buff a single target.
+  - **Scaling/Endless:** Items/relics with cumulative effects. Economy to buy more items over time.
+
+  A common mistake: taking a powerful relic that contradicts your build direction. A Rush comp with a scaling relic has a relic doing nothing for the first 5+ floors.
+
 evidenceType: editorial-recommendation
 sourceRefs: [L001, L002]
 
 ### When to Pivot
 
-heading: When to Pivot
+heading: Recognizing When to Change Direction
 body: |
-  Pivoting means changing your build direction mid-run. It is risky but sometimes necessary. Pivot when:
+  Pivoting means changing your build direction mid-run. Do it when:
 
-  1. **Your current direction is failing.** If you nearly wipe on consecutive floors, continuing the same path will end the run.
-  2. **A game-changing relic appears.** A top-rarity relic that defines a new win condition can justify rebuilding.
-  3. **Your hero lineup changes.** Losing a key hero or gaining an exceptional one may force a direction change.
-  4. **Floor modifiers counter your build.** Anti-heal zones force sustain comps to pivot; damage-reflect forces rush comps to adapt.
+  1. Your current direction is clearly losing — you are barely surviving fights.
+  2. You find a build-defining relic that offers a new win condition.
+  3. Your hero lineup changes — a key hero dies or you recruit a game-changing hero.
+  4. Floor modifiers counter your current build.
 
-  When pivoting, accept that you will lose value on past investments. Prioritize relics and items that are generically strong (not build-specific) during the transition.
+  When pivoting, accept lost value on past investments. Prioritize generically strong items during the transition.
+
 evidenceType: editorial-recommendation
 sourceRefs: [L002]
 
 ### When Not to Pivot
 
-heading: When Not to Pivot
+heading: Staying the Course
 body: |
-  More runs are lost to unnecessary pivots than to sticking with a flawed build. Do NOT pivot when:
+  Do not pivot when:
 
-  1. Your build is working — even if it is not "optimal."
+  1. Your build is working — even if it's not "optimal."
   2. You have invested in 3+ synergistic relics that would be wasted.
-  3. The tempting alternative relic does not match your drafted heroes.
-  4. You are past floor 15 and the pivot requires rebuilding items (too expensive).
-  5. The new direction addresses a problem you do not actually have.
+  3. The tempting relic does not match your drafted heroes.
+  4. You are past mid-game and the pivot requires rebuilding items.
 
-  A safe rule: if your current team cleared the last 3 floors without losses, stay the course. If you barely survived the last floor, re-evaluate but do not hard-pivot without a clear plan.
+  A safe rule: if your team cleared the last 3 floors without losses, stay the course.
+
 evidenceType: editorial-recommendation
 sourceRefs: [L002]
 
-### Common Build Collapse Reasons
+### Common Reasons a Build Collapses
 
-heading: Common Build Collapse Reasons
+heading: Why Builds Fail
 body: |
-  Builds collapse for predictable reasons. Here are the most common and how to avoid them:
+  Builds collapse for predictable reasons:
 
-  1. **No frontline**: All damage, no tank. Enemies delete your backline. → Always draft at least one durable hero.
-  2. **No damage**: All defense, no kill power. Timers run out. → Ensure at least one hero is built for offense.
-  3. **Hybrid indecision**: Trying to do everything, excelling at nothing. → Commit to one direction by floor 5.
-  4. **Relic anti-synergy**: Relics that work against each other (e.g., rush relic + scaling relic with no overlap). → Read relic conditions before picking.
-  5. **Gold mismanagement**: Spending gold on sidegrades instead of core upgrades. → Prioritize items that close your biggest gap.
-  6. **Ignoring floor modifiers**: Bringing a sustain comp into anti-heal. → Check floor previews and adapt.
-  7. **Late pivot without resources**: Switching direction with no gold and no time to scale. → Pivot early or not at all.
-  8. **Copying Endless builds for Normal**: Endless scaling comps die on Normal because they lack early power. → Match build to difficulty tier.
+  1. **No frontline:** All damage, no tank. Enemies delete your backline.
+  2. **No damage:** All defense, no kill power. Timers run out.
+  3. **Hybrid indecision:** Trying to do everything, excelling at nothing.
+  4. **Relic anti-synergy:** Relics that work against each other.
+  5. **Gold mismanagement:** Spending on sidegrades instead of core upgrades.
+  6. **Ignoring floor modifiers:** Bringing sustain into anti-heal.
+  7. **Late pivot without resources:** Switching direction with no gold.
+  8. **Copying Endless builds for Normal:** Endless scaling comps lack early power.
+
 evidenceType: editorial-recommendation
 sourceRefs: [L001, L002]
 
-### Community Example: Steam Player Strategy
-
-heading: Community Example: Steam Player Strategy
-body: |
-  A community discussion on the Steam forums for Guildrun (app 3669200) highlights a player-reported strategy that has gained traction: drafting two frontline heroes with taunt mechanics and pairing them with a single high-damage backline carry, supplemented by a utility/healer hero. The player describes this as a "2-1-1" framework — two tanks, one DPS, one support.
-
-  Key claims from this community report (L003):
-  - The two-frontline setup provides redundancy — if one tank dies, the other holds until revival or floor end.
-  - The single DPS focuses all offensive relics and items, achieving disproportionately high damage output.
-  - The support hero cycles healing and buffs between the two tanks.
-  - The strategy reportedly performs well through S-difficulty but struggles on SS+ where enemy damage outscales double-tank sustain.
-
-  **Important caveats (community-report):** This strategy has not been verified across all relic combinations, hero pools, or patch versions. It represents one player's experience and should be tested in your own runs rather than treated as a proven meta.
-evidenceType: community-report
-sourceRefs: [L003]
-
 ### How to Read Community Build Claims Safely
 
-heading: How to Read Community Build Claims Safely
+heading: Evaluating Community Advice
 body: |
-  Steam discussions, Discord chats, and Reddit threads are full of build advice. Here is how to evaluate it:
+  Steam discussions, Discord chats, and Reddit threads contain build advice. Evaluate it by:
 
-  1. **Check the patch date.** A claim from three patches ago may reference heroes or relics that have been rebalanced.
-  2. **Identify the difficulty tier.** "This build is broken" on Normal means nothing for SS.
-  3. **Check for relic assumptions.** Most build claims assume specific relics. If you do not have those relics, the build does not work.
-  4. **Look for sample size.** One player's "100% win rate with this build" based on 5 runs is not data.
-  5. **Cross-reference.** If multiple unrelated community members report similar results, the claim is more credible.
-  6. **Test in low-stakes runs first.** Try community builds on lower difficulties before risking your ladder climb.
+  1. **Checking the date.** Old claims may reference nerfed heroes or relics.
+  2. **Identifying the difficulty tier.** "This build works" on Normal means nothing for SS.
+  3. **Checking for relic assumptions.** Most claims assume specific relics you may not have.
+  4. **Looking for sample size.** One player's "100% win rate" based on 5 runs is not data.
+  5. **Cross-referencing.** If multiple unrelated players report similar results, the claim is more credible.
+  6. **Testing in low-stakes runs first.** Try community builds on lower difficulties before risking your climb.
+
 evidenceType: editorial-recommendation
 sourceRefs: [L002]
 
 ### FAQ
 
-heading: FAQ
+heading: Frequently Asked Questions
 body: |
+
   **Q: What is the strongest team composition in Guildrun?**
   A: There is no single strongest composition. The developer FAQ (L002) confirms the game is designed around adaptation. The best comp depends on your available heroes, relics, difficulty tier, and floor modifiers.
 
   **Q: How many heroes should I draft?**
-  A: Team sizes and draft rules may vary, but most community discussion focuses on 4-hero teams. The exact hero cap should be verified in-game.
+  A: Team sizes and draft rules may vary. Check the in-game interface for your current team capacity, as this may change with difficulty and mode.
 
   **Q: Can I win with any hero combination?**
-  A: On lower difficulties, yes — flexibility is high. On SS/SSS and Endless, team composition becomes increasingly strict. Some combinations simply lack the stats to survive.
+  A: On lower difficulties, flexibility is high. On SS/SSS and Endless, team composition becomes increasingly important. Some combinations lack the stats to survive.
 
   **Q: Should I build around my first relic?**
   A: Not always. Your first relic is a suggestion, not a mandate. If it conflicts with your drafted heroes, ignore it. If it aligns, commit.
 
-  **Q: How do I know if my build is good enough for the next difficulty?**
-  A: If you can consistently clear the current difficulty with 2+ different relic configurations, you have a flexible enough understanding to attempt the next tier.
+  **Q: How do I know if my build is ready for the next difficulty?**
+  A: If you can consistently clear the current difficulty with different relic configurations, you have enough understanding to attempt the next tier.
+
 evidenceType: editorial-recommendation
 sourceRefs: [L001, L002]
 
@@ -293,31 +255,26 @@ sourceRefs: [L001, L002]
 
 | Fact | Detail |
 |------|--------|
-| Fixed best team? | No — adaptation is the core design (L002) |
-| Core composition types | Rush, Frontline+Backline, Sustain/Stall, Single-Carry, Scaling/Endless |
+| Fixed best team? | No — adaptation is the core design |
+| Core frameworks | Rush, Frontline+Backline, Sustain/Stall, Single-Carry, Scaling/Endless |
 | Most reliable for new players | Frontline + Backline |
 | Highest risk/reward | Single-Carry |
 | Required for Endless | Scaling composition |
-| Pivot deadline | Floor 15 — after this, pivots rarely succeed |
+| Pivot guideline | Pivot early or not at all; don't pivot late without resources |
 | Common collapse reason | No frontline OR no damage — unbalanced teams |
-| Community example | 2-1-1 (two tanks, one DPS, one support) — community-report (L003) |
-| Source | Steam store (L001), Developer FAQ (L002), Community reports (L003) |
+| Source | Steam store (L001), Developer FAQ (L002) |
 
 ## relatedGuides
-
 - /heroes
 - /relics
 - /rush-mechanic
 - /difficulty-endless
 
 ## uncertainties
-
-- Exact hero draft mechanics and team size limits are not fully documented.
-- Community build claims (L003) are anecdotal and have not been systematically tested.
-- Relic synergy ceilings — some combinations may produce unexpected power spikes that change build viability.
-- Patch frequency and balance update cadence are unknown, so all build advice is subject to change.
-- Exact Endless mode floor scaling that breaks specific compositions is a community-reported threshold, not an official number.
+- Exact hero draft mechanics and team size limits are not fully documented in official sources
+- Specific hero-plus-item-plus-relic combinations that dominate specific difficulties remain unknown due to limited demo data
+- Balance patches may invalidate build frameworks at any time
+- Community consensus on effective builds does not yet exist — the demo is approximately 11 days old
 
 ## blockers
-
-- None. All build advice is based on publicly available developer statements (L001, L002) and clearly labeled community reports (L003). Strategy recommendations are editorial opinion, not presented as confirmed facts.
+- No specific community build examples with verifiable source URLs available. The Steam demo released July 16, 2026 and systematic build documentation from the community does not yet exist. A search of Steam Discussions, Reddit, and community wikis found no concrete hero-plus-item-plus-relic combinations posted by players that can be cited with specific URLs, dates, and author attribution. The page provides editorial build frameworks based on confirmed mechanics, but until at least one verifiable community example with specific source URL is available, the page cannot meet the ready threshold for answering "guildrun builds" search intent with concrete sourced examples.

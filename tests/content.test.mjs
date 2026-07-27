@@ -4,7 +4,7 @@ import path from "node:path";
 import test from "node:test";
 import { exportedHtml, loadModel, root } from "../scripts/content-audit-lib.mjs";
 
-const { pages, sourceIds, combinedSourceIds, ready, review, importedSourceIds, localSourceIds } = loadModel();
+const { pages, combinedSourceIds, ready, review, localSourceIds } = loadModel();
 const out = path.join(root, "out");
 
 test("ready/review sets are computed from data, not hardcoded", () => {
@@ -42,7 +42,7 @@ test("generated routes enforce ready/review robots policies", () => {
 
 test("sitemap contains root, /guides, and ready guides", () => {
   const sitemap = fs.readFileSync(path.join(out, "sitemap.xml"), "utf8");
-  const urls = [...sitemap.matchAll(/<loc>([^<]+)</loc>/g)].map((match) => match[1]);
+  const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
   const expected = ["https://guildrunguide.wiki", "https://guildrunguide.wiki/guides", ...ready.map((slug) => `https://guildrunguide.wiki/${slug}`)];
   assert.deepEqual(urls, expected);
 });

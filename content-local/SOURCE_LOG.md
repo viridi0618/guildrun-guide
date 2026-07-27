@@ -47,7 +47,6 @@
   - "PvP is not planned"
   - "25 heroes, 180 specializations, 300+ relics and 100+ items"
 
-### L003 — Steam Community Build Discussion (Placeholder)
 - id: L003
 - level: community-discussion
 - title: Guildrun Steam Community — Build and Strategy Discussions

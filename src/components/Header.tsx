@@ -4,7 +4,6 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "Guides", href: "/guides" },
   { label: "Heroes", href: "/heroes" },
-  { label: "Builds", href: "/builds" },
   { label: "Release", href: "/release-date" },
 ];
 
