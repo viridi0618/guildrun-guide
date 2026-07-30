@@ -22,5 +22,12 @@ export default function Home() {
       <div className="principle-grid"><article><span>01</span><h3>Facts are traceable</h3><p>Release timing, mechanics, numeric claims, and language support point to specific source URLs.</p></article><article><span>02</span><h3>Advice is labeled</h3><p>Editorial recommendations remain visibly distinct from developer statements and community observations.</p></article><article><span>03</span><h3>Review stays separate</h3><p>Review-stage pages remain noindex and never appear in the homepage, navigation, footer, sitemap, or related-guide lists.</p></article></div>
     </section>
     <section className="section-block" id="guides"><p className="eyebrow">Published guides</p><h2>Start with a source-reviewed guide</h2><GuideGrid guides={readyGuides} /></section>
+
+    {/* Directory badges — homepage only */}
+    <section style={{ paddingTop: "24px", paddingBottom: "32px", display: "flex", flexWrap: "wrap", gap: "8px", alignItems: "center", justifyContent: "center" }}>
+      <a href="https://artificin.com?utm_source=badge&utm_medium=referral&utm_campaign=featured_badge" target="_blank" rel="noopener"><img src="https://artificin.com/badges/Artificin-badge.png" alt="Featured on Artificin" style={{ border: "none", width: "175px", height: "50px" }} /></a>
+      <a href="https://findly.tools/guildrun-guide?utm_source=guildrun-guide" target="_blank" rel="noopener noreferrer"><img src="https://findly.tools/badges/findly-tools-badge-light.svg" alt="Featured on Findly.tools" width="150" /></a>
+      <a href="https://startupfa.me/s/guildrun-guide?utm_source=guildrunguide.wiki" target="_blank" rel="noopener noreferrer"><img src="https://startupfa.me/badges/featured/default-small-rounded.webp" alt="Guildrun Guide - Featured on Startup Fame" width="240" height="37" /></a>
+    </section>
   </div></>;
 }
